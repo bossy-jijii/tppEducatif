@@ -1,40 +1,51 @@
 package Classes;
+import java.util.ArrayList;
 
 
 public class Module {
+    private int id;
     private String intitule;
+    private Enseignant chef;
     private Filiere filiere;
-    private Enseignant responsable;
 
-    // Constructeur
-    public Module(String intitule, Filiere filiere, Enseignant responsable) {
-        this.intitule = intitule;
-        this.filiere = filiere;
-        this.responsable = responsable;
+    public Module() {
     }
 
-    // Méthodes d'accès (getters)
+    public Module(String intitule, Enseignant chef, Filiere filiere) {
+        this.intitule = intitule;
+        this.chef = chef;
+        this.filiere = filiere;
+    }
+
     public String getIntitule() {
         return intitule;
     }
 
-    public Departement getFiliere() {
-        return filiere;
-    }
-
-    public Enseignant getResponsable() {
-        return responsable;
-    }
-
-    // Méthodes de modification (setters)
     public void setIntitule(String intitule) {
         this.intitule = intitule;
     }
 
-    public void setFiliere(Filiere filiere) {
-        this.departement = departement;
+    public Enseignant getChef() {
+        return chef;
     }
 
-    public void setResponsable(Enseignant responsable) {
-        this.responsable = responsable;
+    public void setChef(Enseignant chef) {
+        this.chef = chef;
     }
+
+    public Filiere getFiliere() {
+        return filiere;
+    }
+
+    public void setFiliere(Filiere filiere) {
+        this.filiere = filiere;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}

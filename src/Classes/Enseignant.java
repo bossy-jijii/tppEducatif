@@ -1,59 +1,98 @@
 package Classes;
+import java.util.ArrayList;
+
 
 public class Enseignant {
+
+    private int id;
     private String nom;
     private String prenom;
     private String email;
-    private String grade;
-    private Departement departement;
+    private Integer grade;
+    private Departement dept;
+    ArrayList<Module> modules = new ArrayList<Module>();
 
-    // Constructeur
-    public Enseignant(String nom, String prenom, String email, String grade, Departement departement) {
+
+    public Enseignant() {
+    }
+
+    public Enseignant(Integer id,String nom, String prenom, String email, Integer grade) {
+        this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.grade = grade;
-        this.departement = departement;
     }
 
-    // Méthodes d'accès (getters)
     public String getNom() {
         return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public String getPrenom() {
         return prenom;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public Departement getDepartement() {
-        return departement;
-    }
-
-    // Méthodes de modification (setters)
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setGrade(String grade) {
+    public Integer getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Integer grade) {
         this.grade = grade;
     }
 
-    public void setDepartement(Departement departement) {
-        this.departement = departement;
+    public Departement getDept() {
+        return dept;
     }
+
+    public void setDept(Departement dept) {
+        this.dept = dept;
+    }
+
+    public ArrayList<Module> getModules() {
+        return modules;
+    }
+
+    public void setModules(ArrayList<Module> modules) {
+        this.modules = modules;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    public boolean equals(Enseignant obj) {
+        if (obj == null) {
+            return false;
+        }
+
+
+
+        if (obj.getId() != this.id) {
+            return false;
+        }
+
+        return true;
+    }
+
+}

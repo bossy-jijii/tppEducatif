@@ -1,14 +1,19 @@
 package Classes;
-import java.util.List;
+
+
+import java.util.ArrayList;
 
 public class Etudiant {
+    private int id;
     private String nom;
     private String prenom;
     private String email;
     private int apogee;
     private Filiere filiere;
-}
-    // Constructeur
+
+    public Etudiant() {
+    }
+
     public Etudiant(String nom, String prenom, String email, int apogee, Filiere filiere) {
         this.nom = nom;
         this.prenom = prenom;
@@ -16,44 +21,54 @@ public class Etudiant {
         this.apogee = apogee;
         this.filiere = filiere;
     }
-    // Méthodes d'accès (getters)
+
     public String getNom() {
-        return nom;
+        return this.nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public String getPrenom() {
-        return prenom;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public int getApogee() {
-        return apogee;
-    }
-
-    public Filiere getFiliere() {
-        return filiere;
-    }
-
-    // Méthodes de modification (setters)
-    public void setNom(String nom) {
-        this.nom = nom;
+        return this.prenom;
     }
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
+    public String getEmail() {
+        return this.email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getApogee() {
+        return this.apogee;
     }
 
     public void setApogee(int apogee) {
         this.apogee = apogee;
     }
 
+    public Filiere getFiliere() {
+        return this.filiere;
+    }
+
     public void setFiliere(Filiere filiere) {
         this.filiere = filiere;
     }
+
+
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}
