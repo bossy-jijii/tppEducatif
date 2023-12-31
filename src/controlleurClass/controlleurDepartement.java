@@ -38,7 +38,6 @@ public class controlleurDepartement {
                 System.out.println("enter the id of the departement:");
                 Integer id = idScanner.nextInt();
                 afficherDeppartement(id);
-                idScanner.close();
                 break;
             case 2:
                 Scanner si = new Scanner(System.in);
